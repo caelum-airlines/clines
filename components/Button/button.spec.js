@@ -4,7 +4,7 @@ import {DarkButton, Button} from "./Button.component";
 
 describe('Button', () => {
     it('should render a button', () => {
-        const wrap = mount(<ButtonComponent>OK</ButtonComponent>);
+        const wrap = mount(<Button>OK</Button>);
         expect(wrap.find('button').text()).toBe('OK')
 
     });

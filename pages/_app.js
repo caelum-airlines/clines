@@ -1,5 +1,6 @@
 import '../public/css/rest.css'
 import '../public/css/fonts.css'
+import '../styles/main.scss'
 
 const App = ({Component, pageProps}) => (<Component {...pageProps}/>);
 
