@@ -17,7 +17,6 @@ Before you begin, ensure you have met the following requirements:
 To run this project simply execute this commands inside de project path
 
 ```shell script
-export CLINES_API_URL=<CLINES-API-BASE-URL>
 docker image build -t caelum/clines:latest .
 docker-compose up
 ```
