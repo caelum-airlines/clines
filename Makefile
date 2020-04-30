@@ -7,3 +7,8 @@ stop:
 docker/build: 
 	@ docker image build -t caelum/clines:latest .
 
+test:
+	@ npm test
+
+build: 
+	@ npm run build

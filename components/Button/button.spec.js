@@ -1,6 +1,6 @@
 import React from 'react'
 import {mount} from 'enzyme'
-import {DarkButton, Button} from "./Button.component";
+import {DarkButton, Button} from "./button.component";
 
 describe('Button', () => {
     it('should render a button', () => {

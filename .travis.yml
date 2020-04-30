@@ -1,0 +1,23 @@
+language: node_js
+node_js: '12'
+
+cache:
+  directories:
+   - node_modules
+
+install:
+  - npm install
+
+stages:
+  - build
+  - test
+
+jobs:
+  include:
+    - stage: test
+      name: "Testing Application"
+      script: pwd && ls && make test
+
+    - stage: build
+      name: "Building Application"
+      script: pwd && ls && make build
