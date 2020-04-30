@@ -1,11 +1,10 @@
-const Row = ({values, onClick = (values) => {return undefined}, ...others}) => (
+const Row = ({ values, onClick = (values) => { return undefined }, ...others }) => (
     <tr key={others.index} onClick={() => onClick(values)}>
-        {values.map((value, key) => <td key={key}>{value}</td>)}
+        {values && values.map((value, key) => <td key={key}>{value}</td>)}
     </tr>
 );
 
-const Table = ({headers, rows, rowOnClick = undefined, children}) => {
-
+const Table = ({ headers, rows, rowOnClick = undefined, children }) => {
     return (
         <div className="table-area">
             <div className="table-actions">
@@ -14,12 +13,12 @@ const Table = ({headers, rows, rowOnClick = undefined, children}) => {
 
             <table>
                 <thead>
-                <tr>
-                    {headers.map((header, key) => <th key={key}>{header}</th>)}
-                </tr>
+                    <tr>
+                        {headers && headers.map((header, key) => <th key={key}>{header}</th>)}
+                    </tr>
                 </thead>
                 <tbody>
-                {rows.map((row, key) => <Row key={key}  onClick={rowOnClick} index={key} values={row}/>)}
+                    {rows && rows.map((row, key) => <Row key={key} onClick={rowOnClick} index={key} values={row} />)}
                 </tbody>
             </table>
         </div>

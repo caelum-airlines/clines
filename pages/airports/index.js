@@ -19,13 +19,13 @@ const addAirports = () => {
     Router.push('/airports/add')
 }
 
-const Airports = ({airports=[]}) => (
+const Airports = ({ airports = [] }) => (
     <Layout selected="airports">
         <div className="row">
             <h1>Airports</h1>
             <Button className="medium" onClick={() => addAirports()}>Add new Airports</Button>
         </div>
-        <Table headers={headers} rows={airports} rowOnClick={(values) => viewAirport(values)}/>
+        <Table headers={headers} rows={airports} rowOnClick={(values) => viewAirport(values)} />
     </Layout>
 );
 
@@ -33,10 +33,10 @@ const Airports = ({airports=[]}) => (
 Airports.getInitialProps = async (ctx) => {
     const airports = await rest.list();
 
-    return {airports: airports.map(flatAirport)}
+    return { airports: airports.map(flatAirport) }
 }
 
-const flatAirport = ({code, location}) => [
+const flatAirport = ({ code, location }) => [
     code,
     `${location['country']}`,
     `${location['state']}`,
