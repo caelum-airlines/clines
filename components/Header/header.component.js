@@ -10,6 +10,7 @@ const Header = ({selected=""}) => (
         <nav className="vertical-center">
             <Link key="aircraft" href="/aircraft" className={`medium ${selected === "aircraft"? "selected": ''}`} label="Aircraft"/>
             <Link key="airports" href="/airports" className={`medium ${selected === "airports"? "selected": ''}`} label="Airports"/>
+            <Link key="promotionalcode" href="/promotionalcode" className={`medium ${selected === "promotionalcode"? "selected" : ''}`} label="Promotional Code"/>
         </nav>
     </header>
 );
